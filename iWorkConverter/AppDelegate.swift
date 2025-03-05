@@ -5,7 +5,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     var statusItem: NSStatusItem?
 
     func applicationDidFinishLaunching(_ notification: Notification) {
-        NSApp.setActivationPolicy(.accessory) // ✅ Runs app in background without Dock icon
+        NSApp.setActivationPolicy(.accessory) // ✅ Keeps app running in background
         setupMenuBar()
     }
 
@@ -13,11 +13,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
 
         if let button = statusItem?.button {
-            let icon = NSImage(named: "MenuBarIcon") ?? NSImage(systemSymbolName: "arrow.left.arrow.right", accessibilityDescription: "iWorkConvert")
-            icon?.isTemplate = true // ✅ Supports Light/Dark Mode
-            button.image = icon
+            print("✅ Status bar button loaded") // Debugging line
+            button.image = NSImage(systemSymbolName: "doc.text", accessibilityDescription: "iWorkConvert")
+            button.image?.isTemplate = true // ✅ Ensures icon adapts to Light/Dark mode
         } else {
-            print("❌ Error: Status bar button not found!")
+            print("❌ Error: Status bar button not found!") // Debugging line
         }
 
         let menu = NSMenu()
@@ -56,6 +56,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
 
     @objc func quitApp() {
+        print("Quitting app...") // Debugging line
         NSApp.terminate(nil)
     }
 }

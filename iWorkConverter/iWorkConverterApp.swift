@@ -6,7 +6,7 @@ struct iWorkConvertApp: App {
 
     var body: some Scene {
         Settings {
-            EmptyView() // ✅ Prevents the app from quitting immediately
+            EmptyView() // ✅ Keeps the app running in the background
         }
     }
 }

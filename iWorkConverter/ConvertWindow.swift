@@ -1,11 +1,3 @@
-//
-//  ConvertWindow.swift
-//  iWorkConverter
-//
-//  Created by Arthur on 05/03/2025.
-//
-
-
 import SwiftUI
 import AppKit
 
@@ -15,9 +7,9 @@ struct ConvertWindow: View {
     @State private var selectedFormat: String = "PDF"
 
     let formats = [
-        "PDF", 
-        "Microsoft Office (.docx, .xlsx, .pptx)", 
-        "LibreOffice (.odt, .ods, .odp)", 
+        "PDF",
+        "Microsoft Office (.docx, .xlsx, .pptx)",
+        "LibreOffice (.odt, .ods, .odp)",
         "iWork (.pages, .numbers, .key)"
     ]
 
@@ -60,7 +52,8 @@ struct ConvertWindow: View {
                         Text(format)
                     }
                 }
-                .pickerStyle(SegmentedPickerStyle())
+                .pickerStyle(MenuPickerStyle()) // ✅ Changed to a macOS-style dropdown list
+                .frame(width: 300)
             }
             .padding()
 
@@ -69,7 +62,7 @@ struct ConvertWindow: View {
             }
             .padding()
         }
-        .frame(width: 400, height: 250)
+        .frame(width: 400, height: 300) // Increased window height to fit everything
     }
 
     func selectFile() -> String {
@@ -94,21 +87,5 @@ struct ConvertWindow: View {
     func convertFile() {
         let converter = FileConverter()
         converter.convert(inputPath: inputPath, outputPath: outputPath, format: selectedFormat)
-    }
-}
-
-class ConvertWindowController {
-    static let shared = ConvertWindowController()
-    private var window: NSWindow?
-
-    func showWindow() {
-        if window == nil {
-            let windowSize = NSRect(x: 0, y: 0, width: 400, height: 250)
-            window = NSWindow(contentRect: windowSize, styleMask: [.titled, .closable], backing: .buffered, defer: false)
-            window?.contentView = NSHostingView(rootView: ConvertWindow())
-            window?.center()
-        }
-        window?.makeKeyAndOrderFront(nil)
-        NSApp.activate(ignoringOtherApps: true)
     }
 }

@@ -6,7 +6,7 @@ struct iWorkConvertApp: App {
 
     var body: some Scene {
         Settings {
-            EmptyView() // ✅ Stops default macOS menu from appearing
+            EmptyView() // ✅ Prevents the app from quitting immediately
         }
     }
 }

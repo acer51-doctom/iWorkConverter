@@ -22,7 +22,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
 
         if let button = statusItem?.button {
-            button.image = NSImage(systemSymbolName: "doc.on.doc", accessibilityDescription: "iWorkConvert")
+            button.image = NSImage(named: "MenuBarIcon")
+            button.image?.isTemplate = true  // Makes it adapt to Light/Dark mode
         }
 
         let menu = NSMenu()

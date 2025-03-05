@@ -1,0 +1,554 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXContainerItemProxy section */
+		8E0540A62D788992009B734E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8E05408C2D788990009B734E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8E0540932D788990009B734E;
+			remoteInfo = iWorkConverter;
+		};
+		8E0540B02D788992009B734E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8E05408C2D788990009B734E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8E0540932D788990009B734E;
+			remoteInfo = iWorkConverter;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		8E0540942D788990009B734E /* iWorkConverter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iWorkConverter.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E0540A52D788992009B734E /* iWorkConverterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iWorkConverterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E0540AF2D788992009B734E /* iWorkConverterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iWorkConverterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		8E0540962D788990009B734E /* iWorkConverter */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = iWorkConverter;
+			sourceTree = "<group>";
+		};
+		8E0540A82D788992009B734E /* iWorkConverterTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = iWorkConverterTests;
+			sourceTree = "<group>";
+		};
+		8E0540B22D788992009B734E /* iWorkConverterUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = iWorkConverterUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8E0540912D788990009B734E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8E0540A22D788992009B734E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8E0540AC2D788992009B734E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8E05408B2D788990009B734E = {
+			isa = PBXGroup;
+			children = (
+				8E0540962D788990009B734E /* iWorkConverter */,
+				8E0540A82D788992009B734E /* iWorkConverterTests */,
+				8E0540B22D788992009B734E /* iWorkConverterUITests */,
+				8E0540952D788990009B734E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8E0540952D788990009B734E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8E0540942D788990009B734E /* iWorkConverter.app */,
+				8E0540A52D788992009B734E /* iWorkConverterTests.xctest */,
+				8E0540AF2D788992009B734E /* iWorkConverterUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8E0540932D788990009B734E /* iWorkConverter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8E0540B92D788992009B734E /* Build configuration list for PBXNativeTarget "iWorkConverter" */;
+			buildPhases = (
+				8E0540902D788990009B734E /* Sources */,
+				8E0540912D788990009B734E /* Frameworks */,
+				8E0540922D788990009B734E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				8E0540962D788990009B734E /* iWorkConverter */,
+			);
+			name = iWorkConverter;
+			packageProductDependencies = (
+			);
+			productName = iWorkConverter;
+			productReference = 8E0540942D788990009B734E /* iWorkConverter.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8E0540A42D788992009B734E /* iWorkConverterTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8E0540BC2D788992009B734E /* Build configuration list for PBXNativeTarget "iWorkConverterTests" */;
+			buildPhases = (
+				8E0540A12D788992009B734E /* Sources */,
+				8E0540A22D788992009B734E /* Frameworks */,
+				8E0540A32D788992009B734E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8E0540A72D788992009B734E /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				8E0540A82D788992009B734E /* iWorkConverterTests */,
+			);
+			name = iWorkConverterTests;
+			packageProductDependencies = (
+			);
+			productName = iWorkConverterTests;
+			productReference = 8E0540A52D788992009B734E /* iWorkConverterTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		8E0540AE2D788992009B734E /* iWorkConverterUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8E0540BF2D788992009B734E /* Build configuration list for PBXNativeTarget "iWorkConverterUITests" */;
+			buildPhases = (
+				8E0540AB2D788992009B734E /* Sources */,
+				8E0540AC2D788992009B734E /* Frameworks */,
+				8E0540AD2D788992009B734E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8E0540B12D788992009B734E /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				8E0540B22D788992009B734E /* iWorkConverterUITests */,
+			);
+			name = iWorkConverterUITests;
+			packageProductDependencies = (
+			);
+			productName = iWorkConverterUITests;
+			productReference = 8E0540AF2D788992009B734E /* iWorkConverterUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8E05408C2D788990009B734E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1620;
+				LastUpgradeCheck = 1620;
+				TargetAttributes = {
+					8E0540932D788990009B734E = {
+						CreatedOnToolsVersion = 16.2;
+					};
+					8E0540A42D788992009B734E = {
+						CreatedOnToolsVersion = 16.2;
+						TestTargetID = 8E0540932D788990009B734E;
+					};
+					8E0540AE2D788992009B734E = {
+						CreatedOnToolsVersion = 16.2;
+						TestTargetID = 8E0540932D788990009B734E;
+					};
+				};
+			};
+			buildConfigurationList = 8E05408F2D788990009B734E /* Build configuration list for PBXProject "iWorkConverter" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8E05408B2D788990009B734E;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 8E0540952D788990009B734E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8E0540932D788990009B734E /* iWorkConverter */,
+				8E0540A42D788992009B734E /* iWorkConverterTests */,
+				8E0540AE2D788992009B734E /* iWorkConverterUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8E0540922D788990009B734E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8E0540A32D788992009B734E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8E0540AD2D788992009B734E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8E0540902D788990009B734E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8E0540A12D788992009B734E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8E0540AB2D788992009B734E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8E0540A72D788992009B734E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8E0540932D788990009B734E /* iWorkConverter */;
+			targetProxy = 8E0540A62D788992009B734E /* PBXContainerItemProxy */;
+		};
+		8E0540B12D788992009B734E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8E0540932D788990009B734E /* iWorkConverter */;
+			targetProxy = 8E0540B02D788992009B734E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		8E0540B72D788992009B734E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8E0540B82D788992009B734E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		8E0540BA2D788992009B734E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = iWorkConverter/iWorkConverter.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"iWorkConverter/Preview Content\"";
+				DEVELOPMENT_TEAM = J775AH8Z77;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.acer51.iWorkConverter;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		8E0540BB2D788992009B734E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = iWorkConverter/iWorkConverter.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"iWorkConverter/Preview Content\"";
+				DEVELOPMENT_TEAM = J775AH8Z77;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.acer51.iWorkConverter;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		8E0540BD2D788992009B734E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = J775AH8Z77;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.acer51.iWorkConverterTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iWorkConverter.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/iWorkConverter";
+			};
+			name = Debug;
+		};
+		8E0540BE2D788992009B734E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = J775AH8Z77;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.acer51.iWorkConverterTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iWorkConverter.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/iWorkConverter";
+			};
+			name = Release;
+		};
+		8E0540C02D788992009B734E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = J775AH8Z77;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.acer51.iWorkConverterUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = iWorkConverter;
+			};
+			name = Debug;
+		};
+		8E0540C12D788992009B734E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = J775AH8Z77;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.acer51.iWorkConverterUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = iWorkConverter;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8E05408F2D788990009B734E /* Build configuration list for PBXProject "iWorkConverter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8E0540B72D788992009B734E /* Debug */,
+				8E0540B82D788992009B734E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8E0540B92D788992009B734E /* Build configuration list for PBXNativeTarget "iWorkConverter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8E0540BA2D788992009B734E /* Debug */,
+				8E0540BB2D788992009B734E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8E0540BC2D788992009B734E /* Build configuration list for PBXNativeTarget "iWorkConverterTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8E0540BD2D788992009B734E /* Debug */,
+				8E0540BE2D788992009B734E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8E0540BF2D788992009B734E /* Build configuration list for PBXNativeTarget "iWorkConverterUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8E0540C02D788992009B734E /* Debug */,
+				8E0540C12D788992009B734E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8E05408C2D788990009B734E /* Project object */;
+}

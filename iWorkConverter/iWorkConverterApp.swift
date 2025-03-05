@@ -6,7 +6,7 @@ struct iWorkConvertApp: App {
 
     var body: some Scene {
         Settings {
-            EmptyView() // ✅ Keeps the app running in the background
+            EmptyView() // Prevents unwanted macOS menus
         }
     }
 }

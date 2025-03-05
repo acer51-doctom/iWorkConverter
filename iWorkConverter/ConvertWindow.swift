@@ -6,63 +6,45 @@ struct ConvertWindow: View {
     @State private var outputPath: String = ""
     @State private var selectedFormat: String = "PDF"
 
-    let formats = [
-        "PDF",
-        "Microsoft Office (.docx, .xlsx, .pptx)",
-        "LibreOffice (.odt, .ods, .odp)",
-        "iWork (.pages, .numbers, .key)"
-    ]
+    var formats: [String] {
+        let fileExtension = (inputPath as NSString).pathExtension.lowercased()
+        switch fileExtension {
+        case "pages":
+            return ["PDF", "Microsoft Word (.docx)", "LibreOffice (.odt)"]
+        case "key":
+            return ["PDF", "PowerPoint (.pptx)", "LibreOffice (.odp)"]
+        case "numbers":
+            return ["PDF", "Excel (.xlsx)", "LibreOffice (.ods)"]
+        default:
+            return ["PDF"]
+        }
+    }
 
     var body: some View {
         VStack {
-            Text("Welcome to iWorkConvert!")
-                .font(.headline)
-                .padding()
+            Text("Welcome to iWorkConvert!").font(.headline).padding()
 
-            VStack(alignment: .leading) {
-                Text("Select the file to convert:")
-                HStack {
-                    TextField("Select file...", text: $inputPath)
-                        .textFieldStyle(RoundedBorderTextFieldStyle())
-                        .disabled(true)
-                    Button("Browse") {
-                        inputPath = selectFile()
-                    }
-                }
-            }
-            .padding()
+            HStack {
+                TextField("Select file...", text: $inputPath).disabled(true)
+                Button("Browse") { inputPath = selectFile() }
+            }.padding()
 
-            VStack(alignment: .leading) {
-                Text("Select output folder:")
-                HStack {
-                    TextField("Select folder...", text: $outputPath)
-                        .textFieldStyle(RoundedBorderTextFieldStyle())
-                        .disabled(true)
-                    Button("Browse") {
-                        outputPath = selectFolder()
-                    }
-                }
-            }
-            .padding()
+            HStack {
+                TextField("Select folder...", text: $outputPath).disabled(true)
+                Button("Browse") { outputPath = selectFolder() }
+            }.padding()
 
-            VStack(alignment: .leading) {
-                Text("Select output format:")
-                Picker("Format", selection: $selectedFormat) {
-                    ForEach(formats, id: \.self) { format in
-                        Text(format)
-                    }
-                }
-                .pickerStyle(MenuPickerStyle()) // ✅ Changed to a macOS-style dropdown list
-                .frame(width: 300)
+            Picker("Format", selection: $selectedFormat) {
+                ForEach(formats, id: \.self) { format in Text(format) }
             }
-            .padding()
+            .pickerStyle(MenuPickerStyle())
 
             Button("Convert!") {
                 convertFile()
             }
-            .padding()
+            .padding(.bottom, 10)
         }
-        .frame(width: 400, height: 300) // Increased window height to fit everything
+        .frame(width: 500, height: 350)
     }
 
     func selectFile() -> String {

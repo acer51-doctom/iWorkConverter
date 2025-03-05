@@ -3,9 +3,11 @@ import SwiftUI
 
 class AppDelegate: NSObject, NSApplicationDelegate {
     var statusItem: NSStatusItem?
+    var convertWindowController: NSWindowController?
+    var settingsWindowController: NSWindowController?
 
     func applicationDidFinishLaunching(_ notification: Notification) {
-        NSApp.setActivationPolicy(.accessory) // ✅ Keeps app running in background
+        NSApp.setActivationPolicy(.accessory) // Runs app in background
         setupMenuBar()
     }
 
@@ -13,11 +15,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
 
         if let button = statusItem?.button {
-            print("✅ Status bar button loaded") // Debugging line
             button.image = NSImage(systemSymbolName: "doc.text", accessibilityDescription: "iWorkConvert")
-            button.image?.isTemplate = true // ✅ Ensures icon adapts to Light/Dark mode
-        } else {
-            print("❌ Error: Status bar button not found!") // Debugging line
+            button.image?.isTemplate = true
         }
 
         let menu = NSMenu()
@@ -30,33 +29,38 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
 
     @objc func openConvertWindow() {
-        let window = NSWindow(
-            contentRect: NSRect(x: 0, y: 0, width: 400, height: 250),
-            styleMask: [.titled, .closable],
-            backing: .buffered, defer: false
-        )
-        window.center()
-        window.title = "iWorkConvert"
-        window.contentView = NSHostingView(rootView: ConvertWindow())
-        window.makeKeyAndOrderFront(nil)
+        if convertWindowController == nil {
+            let window = NSWindow(
+                contentRect: NSRect(x: 0, y: 0, width: 500, height: 350),
+                styleMask: [.titled, .closable, .resizable],
+                backing: .buffered, defer: false
+            )
+            window.center()
+            window.title = "iWorkConvert"
+            window.contentView = NSHostingView(rootView: ConvertWindow())
+            convertWindowController = NSWindowController(window: window)
+        }
+        convertWindowController?.showWindow(nil)
         NSApp.activate(ignoringOtherApps: true)
     }
 
     @objc func openSettings() {
-        let window = NSWindow(
-            contentRect: NSRect(x: 0, y: 0, width: 300, height: 200),
-            styleMask: [.titled, .closable],
-            backing: .buffered, defer: false
-        )
-        window.center()
-        window.title = "Settings"
-        window.contentView = NSHostingView(rootView: SettingsView())
-        window.makeKeyAndOrderFront(nil)
+        if settingsWindowController == nil {
+            let window = NSWindow(
+                contentRect: NSRect(x: 0, y: 0, width: 350, height: 250),
+                styleMask: [.titled, .closable, .resizable],
+                backing: .buffered, defer: false
+            )
+            window.center()
+            window.title = "Settings"
+            window.contentView = NSHostingView(rootView: SettingsView())
+            settingsWindowController = NSWindowController(window: window)
+        }
+        settingsWindowController?.showWindow(nil)
         NSApp.activate(ignoringOtherApps: true)
     }
 
     @objc func quitApp() {
-        print("Quitting app...") // Debugging line
         NSApp.terminate(nil)
     }
 }

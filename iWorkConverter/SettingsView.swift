@@ -2,47 +2,25 @@ import SwiftUI
 
 struct SettingsView: View {
     @AppStorage("language") private var language = "English"
-    @AppStorage("defaultSavePath") private var defaultSavePath = ""
-    @AppStorage("alwaysChoosePath") private var alwaysChoosePath = false
     @State private var showUpdatePopup = false
 
     var body: some View {
-        TabView {
-            VStack {
-                Picker("Language:", selection: $language) {
-                    Text("English").tag("English")
-                    Text("French").tag("French")
-                }
-                .pickerStyle(SegmentedPickerStyle())
-                .padding()
-
-                HStack {
-                    Text("Default save path:")
-                    TextField("Select folder...", text: $defaultSavePath)
-                        .disabled(alwaysChoosePath)
-                    Button("Browse") {
-                        defaultSavePath = selectFolder()
-                    }
-                }
-                .padding()
-
-                Toggle("Always choose where to save", isOn: $alwaysChoosePath)
-                    .padding()
+        VStack {
+            Picker("Language:", selection: $language) {
+                Text("English").tag("English")
+                Text("French").tag("French")
             }
-            .tabItem { Text("General") }
+            .pickerStyle(SegmentedPickerStyle())
+            .padding()
 
-            VStack {
-                Button("Verify updates now") {
-                    checkForUpdates()
-                }
-                .padding()
-
-                Toggle("Update automatically", isOn: .constant(true))
-                Toggle("Download updates automatically", isOn: .constant(true))
-                Toggle("Install updates automatically", isOn: .constant(true))
+            Button("Verify updates now") {
+                checkForUpdates()
             }
-            .tabItem { Text("Update") }
+            .padding()
+
         }
+        .frame(width: 350, height: 200)
+        .background(VisualEffectView(material: .sidebar, blendingMode: .behindWindow)) // Transparency
         .alert(isPresented: $showUpdatePopup) {
             Alert(
                 title: Text("Update Available"),
@@ -59,15 +37,5 @@ struct SettingsView: View {
 
     func checkForUpdates() {
         showUpdatePopup = true
-    }
-
-    func selectFolder() -> String {
-        let panel = NSOpenPanel()
-        panel.canChooseDirectories = true
-        panel.canChooseFiles = false
-        if panel.runModal() == .OK {
-            return panel.url?.path ?? ""
-        }
-        return ""
     }
 }

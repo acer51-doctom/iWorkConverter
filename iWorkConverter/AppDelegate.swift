@@ -7,7 +7,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     var settingsWindowController: NSWindowController?
 
     func applicationDidFinishLaunching(_ notification: Notification) {
-        NSApp.setActivationPolicy(.accessory) // Runs app in background
+        NSApp.setActivationPolicy(.accessory) // ✅ Runs app in background
         setupMenuBar()
     }
 
@@ -16,7 +16,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
         if let button = statusItem?.button {
             button.image = NSImage(systemSymbolName: "doc.text", accessibilityDescription: "iWorkConvert")
-            button.image?.isTemplate = true
+            button.image?.isTemplate = true // ✅ Supports Light/Dark Mode
         }
 
         let menu = NSMenu()
@@ -31,7 +31,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @objc func openConvertWindow() {
         if convertWindowController == nil {
             let window = NSWindow(
-                contentRect: NSRect(x: 0, y: 0, width: 500, height: 350),
+                contentRect: NSRect(x: 0, y: 0, width: 500, height: 300),
                 styleMask: [.titled, .closable, .resizable],
                 backing: .buffered, defer: false
             )
@@ -47,7 +47,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @objc func openSettings() {
         if settingsWindowController == nil {
             let window = NSWindow(
-                contentRect: NSRect(x: 0, y: 0, width: 350, height: 250),
+                contentRect: NSRect(x: 0, y: 0, width: 400, height: 300),
                 styleMask: [.titled, .closable, .resizable],
                 backing: .buffered, defer: false
             )

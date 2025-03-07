@@ -24,27 +24,50 @@ struct ConvertWindow: View {
         VStack {
             Text("Welcome to iWorkConvert!").font(.headline).padding()
 
-            HStack {
-                TextField("Select file...", text: $inputPath).disabled(true)
-                Button("Browse") { inputPath = selectFile() }
-            }.padding()
-
-            HStack {
-                TextField("Select folder...", text: $outputPath).disabled(true)
-                Button("Browse") { outputPath = selectFolder() }
-            }.padding()
-
-            Picker("Format", selection: $selectedFormat) {
-                ForEach(formats, id: \.self) { format in Text(format) }
+            VStack(alignment: .leading) {
+                Text("Select the file to convert:")
+                HStack {
+                    TextField("Select file...", text: $inputPath)
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                        .disabled(true)
+                    Button("Browse") {
+                        inputPath = selectFile()
+                    }
+                }
             }
-            .pickerStyle(MenuPickerStyle())
+            .padding()
+
+            VStack(alignment: .leading) {
+                Text("Select output folder:")
+                HStack {
+                    TextField("Select folder...", text: $outputPath)
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                        .disabled(true)
+                    Button("Browse") {
+                        outputPath = selectFolder()
+                    }
+                }
+            }
+            .padding()
+
+            VStack(alignment: .leading) {
+                Text("Select output format:")
+                Picker("Format", selection: $selectedFormat) {
+                    ForEach(formats, id: \.self) { format in
+                        Text(format)
+                    }
+                }
+                .pickerStyle(MenuPickerStyle())
+                .frame(width: 300)
+            }
+            .padding()
 
             Button("Convert!") {
                 convertFile()
             }
-            .padding(.bottom, 10)
+            .padding()
         }
-        .frame(width: 500, height: 350)
+        .frame(minWidth: 500, minHeight: 300) // ✅ Fully resizable
     }
 
     func selectFile() -> String {

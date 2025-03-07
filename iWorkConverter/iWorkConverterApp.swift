@@ -8,7 +8,7 @@ struct iWorkConvertApp: App {
     var body: some Scene {
         Settings {
             SettingsView()
-                .environmentObject(languageManager) // ✅ Ensures language updates dynamically
+                .environmentObject(languageManager) // ✅ Ensures dynamic language updates
         }
     }
 }

@@ -5,9 +5,10 @@ struct SettingsView: View {
     @AppStorage("defaultSavePath") private var defaultSavePath = ""
     @AppStorage("alwaysChoosePath") private var alwaysChoosePath = false
     @AppStorage("updateInterval") private var updateInterval = "Daily"
-    
+    @AppStorage("LaunchAtLogin") private var launchAtLogin = false
+
     @State private var showUpdatePopup = false
-    
+
     let updateOptions = ["Hourly", "Daily", "Weekly", "Monthly", "Yearly", "Never"]
 
     var body: some View {
@@ -22,6 +23,9 @@ struct SettingsView: View {
                     }
                     .pickerStyle(SegmentedPickerStyle())
                     .padding()
+
+                    Toggle("Launch at Login", isOn: $launchAtLogin)
+                        .padding()
 
                     HStack {
                         Text("Default Save Path:")
@@ -58,23 +62,13 @@ struct SettingsView: View {
             }
             .padding()
         }
-        .frame(minWidth: 400, minHeight: 300) // ✅ Fully resizable window
-        .alert(isPresented: $showUpdatePopup) {
-            Alert(
-                title: Text("Update Available"),
-                message: Text("A new version of iWorkConvert is available."),
-                primaryButton: .default(Text("Download Update"), action: {
-                    if let url = URL(string: "https://github.com/acer51-doctom/iWorkConverter/releases/latest") {
-                        NSWorkspace.shared.open(url)
-                    }
-                }),
-                secondaryButton: .cancel()
-            )
-        }
+        .frame(minWidth: 450, minHeight: 320)
     }
 
     func checkForUpdates() {
-        showUpdatePopup = true
+        if let url = URL(string: "https://github.com/acer51-doctom/iWorkConverter/releases/latest") {
+            NSWorkspace.shared.open(url)
+        }
     }
 
     func selectFolder() -> String {

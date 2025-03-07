@@ -9,6 +9,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationDidFinishLaunching(_ notification: Notification) {
         NSApp.setActivationPolicy(.accessory) // ✅ Runs app in background
         setupMenuBar()
+        checkLaunchAtLogin()
     }
 
     func setupMenuBar() {
@@ -31,7 +32,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @objc func openConvertWindow() {
         if convertWindowController == nil {
             let window = NSWindow(
-                contentRect: NSRect(x: 0, y: 0, width: 500, height: 300),
+                contentRect: NSRect(x: 0, y: 0, width: 500, height: 350),
                 styleMask: [.titled, .closable, .resizable],
                 backing: .buffered, defer: false
             )
@@ -47,7 +48,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @objc func openSettings() {
         if settingsWindowController == nil {
             let window = NSWindow(
-                contentRect: NSRect(x: 0, y: 0, width: 400, height: 300),
+                contentRect: NSRect(x: 0, y: 0, width: 450, height: 320),
                 styleMask: [.titled, .closable, .resizable],
                 backing: .buffered, defer: false
             )
@@ -62,5 +63,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     @objc func quitApp() {
         NSApp.terminate(nil)
+    }
+
+    func checkLaunchAtLogin() {
+        let launchAtLogin = UserDefaults.standard.bool(forKey: "LaunchAtLogin")
+        if launchAtLogin {
+            // Add logic to enable launch at login
+        }
     }
 }

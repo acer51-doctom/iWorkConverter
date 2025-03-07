@@ -6,23 +6,11 @@ struct ConvertWindow: View {
     @State private var outputPath: String = ""
     @State private var selectedFormat: String = "PDF"
 
-    var formats: [String] {
-        let fileExtension = (inputPath as NSString).pathExtension.lowercased()
-        switch fileExtension {
-        case "pages":
-            return ["PDF", "Microsoft Word (.docx)", "LibreOffice (.odt)"]
-        case "key":
-            return ["PDF", "PowerPoint (.pptx)", "LibreOffice (.odp)"]
-        case "numbers":
-            return ["PDF", "Excel (.xlsx)", "LibreOffice (.ods)"]
-        default:
-            return ["PDF"]
-        }
-    }
-
     var body: some View {
-        VStack {
-            Text("Welcome to iWorkConvert!").font(.headline).padding()
+        VStack(alignment: .leading, spacing: 10) {
+            Text("iWorkConvert")
+                .font(.headline)
+                .padding(.top)
 
             VStack(alignment: .leading) {
                 Text("Select the file to convert:")
@@ -35,7 +23,7 @@ struct ConvertWindow: View {
                     }
                 }
             }
-            .padding()
+            .padding(.horizontal)
 
             VStack(alignment: .leading) {
                 Text("Select output folder:")
@@ -48,26 +36,29 @@ struct ConvertWindow: View {
                     }
                 }
             }
-            .padding()
+            .padding(.horizontal)
 
             VStack(alignment: .leading) {
                 Text("Select output format:")
                 Picker("Format", selection: $selectedFormat) {
-                    ForEach(formats, id: \.self) { format in
-                        Text(format)
-                    }
+                    Text("PDF").tag("PDF")
+                    Text("Microsoft Word (.docx)").tag("DOCX")
+                    Text("LibreOffice (.odt)").tag("ODT")
                 }
                 .pickerStyle(MenuPickerStyle())
-                .frame(width: 300)
+                .frame(maxWidth: .infinity, alignment: .leading)
             }
-            .padding()
+            .padding(.horizontal)
 
-            Button("Convert!") {
-                convertFile()
+            Button("Convert") {
+                let converter = FileConverter()
+                converter.convert(inputPath: inputPath, outputPath: outputPath, format: selectedFormat)
+            }
+            .padding(.top, 10)
+
             }
             .padding()
-        }
-        .frame(minWidth: 500, minHeight: 300) // ✅ Fully resizable
+            .frame(maxWidth: .infinity)
     }
 
     func selectFile() -> String {
@@ -87,10 +78,5 @@ struct ConvertWindow: View {
             return panel.url?.path ?? ""
         }
         return ""
-    }
-
-    func convertFile() {
-        let converter = FileConverter()
-        converter.convert(inputPath: inputPath, outputPath: outputPath, format: selectedFormat)
     }
 }
